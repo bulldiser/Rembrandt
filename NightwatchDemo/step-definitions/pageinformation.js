@@ -11,4 +11,8 @@ module.exports = function () {
             done();
         }).assert.title(title);
     })
+
+    this.Then(/^Test Step&/, function () {
+
+    })
 }
