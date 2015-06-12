@@ -5,12 +5,16 @@
   "main": "gulpfile.js",
   "dependencies": {
     "cucumber": "^0.5.0",
+    "glob": "^5.0.10",
+    "grunt-nightwatch-report": "^0.1.6",
     "gulp": "^3.9.0",
     "gulp-nightwatch": "^0.1.3",
-    "rimraf": "^2.4.0",
-    "glob": "^5.0.10"
+    "grunt-gulp":  "^0.1.0",
+    "rimraf": "^2.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bulldiser/Rembrandt"

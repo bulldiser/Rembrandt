@@ -60,6 +60,7 @@
     <Content Include="config\nightwatch.json" />
     <Content Include="features\HomePage.feature" />
     <Content Include="config\config.json" />
+    <Content Include="gruntfile.js" />
     <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -76,6 +77,8 @@
     <Content Include="step-definitions\navigation.js" />
     <Content Include="step-definitions\pageinformation.js" />
     <Content Include="tests\homepage.js" />
+    <Content Include="tests\output\DoNotDelete.txt" />
+    <Content Include="tests\reports\DoNotDelete.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

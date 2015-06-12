@@ -1,6 +1,8 @@
 ﻿var gulp = require('gulp'),
     nightwatch = require('gulp-nightwatch');
 
+require('gulp-grunt')(gulp);
+
 gulp.task('runTests', function () {
     gulp.src('')
         .pipe(nightwatch({
