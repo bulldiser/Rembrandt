@@ -60,6 +60,7 @@
     <Content Include="config\nightwatch.json" />
     <Content Include="features\HomePage.feature" />
     <Content Include="config\config.json" />
+    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
