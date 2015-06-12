@@ -10,10 +10,9 @@
         },
     });
 
-    // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-nightwatch-report');
 
     // Default task(s).
-    grunt.registerTask('default', ['nightwatch_report']);
-
+    grunt.registerTask('default', ['grunt-report']);
+    grunt.registerTask('grunt-report', ['nightwatch_report']);
 };
