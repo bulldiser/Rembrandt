@@ -8,7 +8,6 @@
     "glob": "^5.0.10",
     "grunt-nightwatch-report": "^0.1.6",
     "gulp-nightwatch": "^0.1.3",
-    "gulp-grunt": "^0.5.2",
     "rimraf": "^2.4.0"
   },
   "devDependencies": {
