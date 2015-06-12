@@ -1,17 +1,19 @@
 ﻿var gulp = require('gulp'),
-    nightwatch = require('gulp-nightwatch');
+    nightwatch = require('gulp-nightwatch'),
+    shell = require('gulp-shell');
 
-require('gulp-grunt')(gulp, {
-    prefix: 'grunt-'
-});
-
-gulp.task('runTests', function () {
-    gulp.src('')
+gulp.task('test', function () {
+    return gulp.src('')
         .pipe(nightwatch({
             configFile: 'config/nightwatch.json'
-        })).on('error', errorHandler);
+        }))
+        .on('error', errorHandler);
+});
 
-    //gulp.start('grunt-report');
+gulp.task('report', ['test'], function () {
+    return gulp.src('')
+        .pipe(shell(['grunt build-report']))
+        .on('error', errorHandler);
 });
 
 function errorHandler(error) {
