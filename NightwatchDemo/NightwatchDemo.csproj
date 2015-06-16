@@ -74,6 +74,7 @@
     <Content Include="globals\driverextensions.js" />
     <Content Include="gulpfile.js" />
     <Content Include="selenium-server-standalone-2.45.0.jar" />
+    <Content Include="step-definitions\formsteps.js" />
     <Content Include="step-definitions\navigation.js" />
     <Content Include="step-definitions\pageinformation.js" />
     <Content Include="tests\homepage.js" />
