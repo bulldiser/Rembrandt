@@ -83,22 +83,24 @@ runtime = Cucumber(getFeatureSources(), getSupportCodeInitializer());
 
 runtime.getFeatures().getFeatures().forEach(function (feature, next) {
     createTestFile(feature);
-    feature.instructVisitorToVisitScenarios({
-        visitScenario: function (scenario) {
-            var steps = [];
-            scenario.getSteps().forEach(function (step, next) {
-                var stepExecutor = getStepExecutor(step);
+    var elements = feature.getFeatureElements();
+    console.log(elements.length())
+    for (i = 0; i < elements.length() ; i++) {
+        var scenario = elements.getAtIndex(i);
 
-                if (stepExecutor) {
-                    steps.push(stepExecutor);
-                }
-                next();
-            }, function () {
-                discoverScenario(feature, scenario, steps);
-            });
-        }
-    });
-}, function () { });
+        var steps = [];
+        scenario.getSteps().forEach(function (step, next) {
+            var stepExecutor = getStepExecutor(step);
+
+            if (stepExecutor) {
+                steps.push(stepExecutor);
+            }
+            next();
+        }, function () {
+            discoverScenario(feature, scenario, steps);
+        });
+    }
+});
 
 if (CucumberSummaryFormatter.getUndefinedStepLogBuffer()) {
     CucumberSummaryFormatter.logUndefinedStepSnippets();

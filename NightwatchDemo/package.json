@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "cucumber": "^0.5.0",
+    "cucumber": "git+https://github.com/bulldiser/cucumber-js.git",
     "glob": "^5.0.10",
     "grunt-nightwatch-report": "^0.1.6",
     "gulp-nightwatch": "^0.1.3",
