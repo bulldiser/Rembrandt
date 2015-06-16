@@ -13,7 +13,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "gulp": "^3.9.0",
-    "gulp-shell": "^0.4.2"
+    "gulp-shell": "git+https://github.com/bulldiser/gulp-shell.git"
   },
   "repository": {
     "type": "git",
