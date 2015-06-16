@@ -1,6 +1,5 @@
 ﻿var assert = require('assert'),
-    driver = require('../globals/driverextensions'),
-    config = require('../config/config.json');
+    driver = require('../globals/driverextensions');
 
 module.exports = function () {
 
@@ -8,7 +7,7 @@ module.exports = function () {
         this.perform(function (client, done) {
             driver.webDriverWait(client, function () {
                 return this.title == title;
-            }, config.TimeOut);
+            }, 5000);
             done();
         }).assert.title(title);
     })
