@@ -1,0 +1,39 @@
+{
+    "numTests": 1,
+    "numFailures": 0,
+    "numSuccess": 1,
+    "summaryReportGenDateTime": "Mon Jun 15 2015 23:59:30 GMT-0400 (Eastern Daylight Time)",
+    "suites": [
+        {
+            "file": "tests/output/FIREFOX_32.0.3_WINDOWS_homepage.xml",
+            "name": "homepage",
+            "numTests": 2,
+            "numSkipped": 0,
+            "numFailures": 0,
+            "numErrors": 0,
+            "package": "homepage",
+            "executionTime": 22.33,
+            "timestamp": "Tue, 16 Jun 2015 03:59:07 GMT",
+            "cases": [
+                {
+                    "name": "Validate the home page",
+                    "numFailures": 0,
+                    "failures": [],
+                    "numSkipped": 0,
+                    "skipped": [],
+                    "executionTime": 10.26,
+                    "numAssertions": 1
+                },
+                {
+                    "name": "Validate navigating back to home page functionality",
+                    "numFailures": 0,
+                    "failures": [],
+                    "numSkipped": 0,
+                    "skipped": [],
+                    "executionTime": 12.07,
+                    "numAssertions": 3
+                }
+            ]
+        }
+    ]
+}
