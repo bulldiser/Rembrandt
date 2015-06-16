@@ -84,7 +84,6 @@ runtime = Cucumber(getFeatureSources(), getSupportCodeInitializer());
 runtime.getFeatures().getFeatures().forEach(function (feature, next) {
     createTestFile(feature);
     var elements = feature.getFeatureElements();
-    console.log(elements.length())
     for (i = 0; i < elements.length() ; i++) {
         var scenario = elements.getAtIndex(i);
 
