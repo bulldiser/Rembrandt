@@ -1,15 +1,14 @@
-﻿var assert = require('assert'),
+﻿﻿var assert = require('assert'),
     config = require('../config/config.json'),
     driver = require('../globals/driverextensions');
 
 module.exports = function () {
 
-    this.When(/^I click "(.*)"$/, function (text) {
-
+    this.When(/^I click "(.*)"$/, function (text, callback) {
         var xpath = "//*[text()='" + text + "']"
 
         this.useXpath()
-            .waitForElementVisible(xpath, config.TimeOut)
+            .waitForElementVisible(xpath, config.TimeOut, false)
             .click(xpath);
     });
 
@@ -22,7 +21,8 @@ module.exports = function () {
             .click(topMenuXpath)
             .waitForElementVisible(subMenuXpath, config.TimeOut)
             .click(subMenuXpath);
+
+	callback();
         
     });
-
-     }
+}

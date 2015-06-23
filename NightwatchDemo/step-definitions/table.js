@@ -1,4 +1,4 @@
-﻿var assert = require('assert'),
+var assert = require('assert'),
     driver = require('../globals/driverextensions'),
     config = require('../config/config.json');
 
