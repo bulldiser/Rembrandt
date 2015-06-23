@@ -58,11 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\nightwatch.json" />
-    <Content Include="features\HomePage.feature" />
+    <Content Include="HomePage.feature" />
     <Content Include="config\config.json" />
     <Content Include="gruntfile.js" />
     <Content Include="package.json" />
-    <Content Include="features\ProjectData.feature" />
+    <Content Include="ProjectData.feature" />
+    <Content Include="Check.feature" />
+    <Content Include="features\Workflow.feature">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,8 +83,13 @@
     <Content Include="step-definitions\dropdown.js" />
     <Content Include="step-definitions\navigation.js" />
     <Content Include="step-definitions\pageinformation.js" />
+    <Content Include="step-definitions\table.js" />
+    <Content Include="tests\workflow.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="check.js" />
     <Content Include="homepage.js" />
-    <Content Include="tests\projectdata.js" />
+    <Content Include="projectdata.js" />
     <Content Include="tests\output\DoNotDelete.txt" />
     <Content Include="tests\reports\DoNotDelete.txt" />
     <Content Include="Web.config" />
