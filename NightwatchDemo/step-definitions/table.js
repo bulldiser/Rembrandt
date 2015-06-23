@@ -1,35 +1,29 @@
-﻿var config = require('../config/config.json'),
-    driver = require('../globals/driverextensions');
+var assert = require('assert'),
+    driver = require('../globals/driverextensions'),
+    config = require('../config/config.json');
 
 module.exports = function () {
 
-    this.Then(/^the table "(.*)" has no rows$/, function (table, callback) {
-        var xpath = '//*[@id="tblStatus"]';
-
+    this.Then(/^the table "([^"]*)" has no rows$/, function (tableName) {
+        var xpath = "//*[contains(concat(' ', normalize-space(@id), ' '), 'tblStatus')]";
         this.useXpath()
-            .waitForElementVisible(xpath, config.TimeOut, false)
-            .elements("xpath", xpath + '/*[descendant::tr]', function (results) {
-                driver.webDriverWait(this, function () {
-                    return results.value.length == 1;
-                }, config.TimeOut);
-                this.verify.equal(results.value.length, 1);
-            });
+            .waitForElementVisible(xpath, config.TimeOut)
+            .useCss()
+            .assert.elementPresent("#tblStatus")
+            .elements('css selector', 'table#tblStatus tr', function (result) {
+                this.assert.ok(result.value.length = 1, 'row count assert');
+            })
+    });
 
-        callback();
-    })
-
-    this.Then(/^the table "(.*)" has more than 1 row$/, function (table, callback) {
-        var xpath = '//*[@id="tblStatus"]';
-
+    this.Then(/^the table "([^"]*)" has more than 1 row$/, function (tableName) {
+        var xpath = "//*[contains(concat(' ', normalize-space(@id), ' '), 'tblStatus')]";
         this.useXpath()
-            .waitForElementVisible(xpath, config.TimeOut, false)
-            .elements("xpath", xpath + '/*[descendant::tr]', function (results) {
-                driver.webDriverWait(this, function () {
-                    return results.value.length > 1;
-                }, config.TimeOut);
-                this.verify.ok(results.value.length > 1);
-            });
-
-        callback();
-    })
+            .waitForElementVisible(xpath, config.TimeOut)
+            .useCss()
+            .assert.elementPresent("#tblStatus")
+            .elements('css selector', 'table#tblStatus tr', function (result) {
+                this.waitForElementVisible('td', config.TimeOut)
+                  this.assert.ok(result.value.length > 1, 'row count assert');
+            })
+    });
 }

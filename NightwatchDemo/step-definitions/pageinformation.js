@@ -27,4 +27,18 @@ module.exports = function () {
 
         callback();
     })
+
+    this.Then(/^the visualization should not be visible$/, function () {
+        
+        this.useCss()
+            .assert.elementNotPresent(".workflow");
+  })
+
+    this.Then(/^the visualization should be visible$/, function () {
+        var xpath = "//*[contains(concat(' ', normalize-space(@class), ' '), ' workflow ')]";
+        this.useXpath()
+            .waitForElementVisible(xpath, config.TimeOut)
+            .useCss()
+            .assert.elementPresent(".workflow");
+    })
 }
