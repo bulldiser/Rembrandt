@@ -63,6 +63,7 @@
     <Content Include="gruntfile.js" />
     <Content Include="package.json" />
     <Content Include="features\ProjectData.feature" />
+    <Content Include="features\UploadData.feature" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,10 +80,12 @@
     <Content Include="step-definitions\dropdown.js" />
     <Content Include="step-definitions\navigation.js" />
     <Content Include="step-definitions\pageinformation.js" />
-    <Content Include="homepage.js" />
+    <Content Include="step-definitions\table.js" />
+    <Content Include="tests\homepage.js" />
     <Content Include="tests\projectdata.js" />
     <Content Include="tests\output\DoNotDelete.txt" />
     <Content Include="tests\reports\DoNotDelete.txt" />
+    <Content Include="tests\uploaddata.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
