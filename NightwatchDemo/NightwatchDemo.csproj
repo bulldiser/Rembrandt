@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -58,13 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\nightwatch.json" />
-    <Content Include="HomePage.feature" />
     <Content Include="config\config.json" />
     <Content Include="gruntfile.js" />
     <Content Include="package.json" />
     <Content Include="features\ProjectData.feature" />
     <Content Include="features\UploadData.feature" />
     <Content Include="features\Workflow.feature" />
+    <Content Include="features\HomePage.feature" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
