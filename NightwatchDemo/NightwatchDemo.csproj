@@ -84,7 +84,7 @@
     <Content Include="step-definitions\table.js" />
     <Content Include="tests\homepage.js" />
     <Content Include="tests\projectdata.js" />
-    <Content Include="tests\workflow.js">
+    <Content Include="tests\workflow.js" />
     <Content Include="tests\output\DoNotDelete.txt" />
     <Content Include="tests\reports\DoNotDelete.txt" />
     <Content Include="tests\uploaddata.js" />
